@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow Project Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>TaskFlow</h2>
+        <p>Project Management</p>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">My Tasks</a>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN DASHBOARD -->
+    <main class="main-content" id="dashboard">
+
+        <h1>Project Dashboard</h1>
+        <p>Manage your project tasks.</p>
+
+        <!-- DASHBOARD COUNTERS -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="progressTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+        </div>
+
+        <!-- TASK FORM -->
+        <section class="task-section" id="tasks">
+
+            <h2>Create New Task</h2>
+
+            <form id="taskForm">
+
+                <label for="taskName">Task Name</label>
+                <input
+                    id="taskName"
+                    placeholder="Enter task name"
+                    required
+                >
+
+                <label for="assignedTo">Assigned To</label>
+                <input
+                    id="assignedTo"
+                    placeholder="Enter person's name"
+                >
+
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option>Low</option>
+                    <option selected>Medium</option>
+                    <option>High</option>
+                </select>
+
+                <label for="deadline">Deadline</label>
+                <input
+                    type="date"
+                    id="deadline"
+                >
+
+                <button type="submit">
+                    + Add Task
+                </button>
+
+            </form>
+
+            <h2>My Tasks</h2>
+
+            <div id="taskList"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
